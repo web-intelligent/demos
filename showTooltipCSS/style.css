@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+.left-side {
+    position: fixed;
+    width: 10%;
+    height: 100%;
+    background: #222;
+}
+
+/* Подсказки при помощи псевдоклассов + добавим эффект выезжания слева */
+
+/* Теперь улучшим код */
+.menu {
+    position: relative;
+    top:50px;
+    padding: 0 20px;
+}
+.menu a {
+    color: #fff;
+    font-size: 16px;
+    display: block;
+    padding:10px 0;
+}
+/* .menu li::after {
+    position: absolute;
+    color: #fff;
+    content: "";
+    margin-left: 10px;
+    top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease-in-out;
+}
+.menu li:nth-child(1)::after {
+    content: "Главная";
+    top: 10px;
+}
+.menu li:nth-child(2)::after {
+    content: "Блог";
+    top: 45px;
+}
+.menu li:nth-child(3)::after {
+    content: "Поиск";
+    top: 85px;
+}
+.menu li:nth-child(4)::after {
+    content: "Вопросы";
+    top: 125px;
+}
+
+.menu li:hover::after {
+    opacity: 1;
+    visibility: visible;
+    margin-left: 30px;
+} */
+
+/* Подсказки без использования псевдоклассов + добавить эффект появления сверху */
+
+.tooltip {
+    color:#fff;
+    position: relative;
+    margin-left: 30px;
+    top: -48px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease-in-out;
+}
+.menu ul li:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -28px;
+}
